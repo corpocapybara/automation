@@ -1,4 +1,4 @@
-function Start-Docker {
+function start-docker-4-win {
     docker ps *> $null
     if(!($?)) {
         write-host 'Starting docker...'
@@ -24,6 +24,8 @@ function Start-Docker {
     
     return $true;
 }
+
+start-docker-4-win;
 
 Write-Host "Stopping docker";
 docker stop $(docker ps -q)

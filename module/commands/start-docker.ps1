@@ -1,4 +1,4 @@
-function Start-Docker {
+function start-docker-4-win {
     docker ps *> $null
     if(!($?)) {
         write-host 'Starting docker...'
@@ -25,7 +25,7 @@ function Start-Docker {
     return $true;
 }
 
-Start-Docker();
+start-docker-4-win;
 
 cd C:\dev\thp\thunderpick\dev-setup\docker-compose-stacks\infrastructure-stacks
 docker compose up -d

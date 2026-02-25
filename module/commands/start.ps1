@@ -1,4 +1,4 @@
-$dockerProcess = Start-Process powershell -ArgumentList "-File", "start-docker.ps1" -PassThru
+$dockerProcess = Start-Process powershell -ArgumentList "-File", "$PSScriptRoot\start-docker.ps1" -PassThru
 
 $oldDir = $pwd;
 cd c:\dev\thp\thunderpick

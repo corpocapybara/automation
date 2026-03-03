@@ -1,4 +1,4 @@
-function start-docker-4-win; {
+function start-docker-4-win {
     docker ps *> $null
     if(!($?)) {
         write-host 'Starting docker...'

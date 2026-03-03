@@ -1,30 +1,3 @@
-function start-docker-4-win {
-    docker ps *> $null
-    if(!($?)) {
-        write-host 'Starting docker...'
-        C:\'Program Files'\Docker\Docker\'Docker Desktop.exe'
-
-        $counter = 20;
-        while ($true) {
-            docker ps *> $null
-            if ($?) {
-                break;
-            }
-            $counter--;
-            
-            if ($counter -le 0) {
-                break;
-            }
-            Start-Sleep -Seconds 1
-            Write-Host '.'
-        }
-        
-        return ($counter -gt 0);
-    }
-    
-    return $true;
-}
-
 try {
     start-docker-4-win;
 
@@ -43,7 +16,6 @@ try {
     sleep(1);
 
     docker volume rm $(docker volume ls -q)
-
 
     Write-Host "Recreate docker containers";
     $proc = Start-Process powershell  `

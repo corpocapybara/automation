@@ -7,4 +7,4 @@ cd $oldDir;
 
 $dockerProcess.WaitForExit();
 
-wt -w 0 new-tab -d $PSScriptRoot PowerShell -File "$PSScriptRoot\start-oddin-stack.ps1"
+wt -w 0 new-tab -d $PSScriptRoot PowerShell -File "$PSScriptRoot\start-oddin.ps1"

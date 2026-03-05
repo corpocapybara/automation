@@ -1,0 +1,1 @@
+wt -w 0 new-tab -d "C:\dev\thp\feed-databet\Feed.Databet.Api" PowerShell -Command "dotnet run -C Release"

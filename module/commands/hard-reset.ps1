@@ -40,7 +40,7 @@ try {
         -ArgumentList "-File", "$PSScriptRoot\start-docker.ps1" `
         -PassThru
 
-    .\db-reset.ps1 -ProcessId $proc.Id
+    & "$PSScriptRoot\db-reset.ps1" -ProcessId $proc.Id
 }
 catch {
     Write-Error $_

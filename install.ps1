@@ -37,6 +37,7 @@ if (-not (Test-Path $PROFILE)) {
 if ((Get-Content $PROFILE -Raw) -notmatch "Import-Module Thp") {
     Add-Content $PROFILE "`nImport-Module Thp"
 }
+Import-Module Thp -Force
 
 Write-Host ""
 Write-Host "Done. Restart PowerShell."
